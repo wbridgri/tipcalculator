@@ -60,7 +60,7 @@ const menuItems = [
         item: 'hamburger',
         desc: '4 ounce grassfed Wagyu patty, cooked to order',
         imgUrl: '',
-        price: 16.99,
+        price: 15.99,
         qty: 0
     },
     {
@@ -78,7 +78,7 @@ const menuItems = [
         item: 'Steak Frites',
         desc: 'grassfed beef, dry aged to perfection, served with shoestrings fries because TikTok',
         imgUrl: '',
-        price: 20.99,
+        price: 25.99,
         qty: 0
     },
     {
@@ -87,7 +87,7 @@ const menuItems = [
         item: 'Rassolnik',
         desc: 'East European pickle soup, made with dill and barley, perfect for hangovers!',
         imgUrl: '',
-        price: 20.99,
+        price: 13.99,
         qty: 0
     },
     {
@@ -123,7 +123,7 @@ const menuItems = [
         item: 'sweet tea',
         desc: 'we only have sweet, sorry if you\'re diabetic.',
         imgUrl: '',
-        price: 20.99,
+        price: 2.99,
         qty: 0
     },
     {
@@ -177,7 +177,7 @@ const menuItems = [
         item: 'rice',
         desc: 'Just white rice',
         imgUrl: '',
-        price: 4.99,
+        price: 2.99,
         qty: 0
     },
     {
@@ -199,3 +199,59 @@ const menuItems = [
         qty: 0
     }
 ]
+
+//confirm Button
+
+confirmBtn.addEventListener('click', (e)=> {
+    e.preventDefault()
+})
+
+//load the menu items
+
+//make Rows
+
+menuDivs.forEach(div => {
+    const menuSubheading = document.createElement('h3')
+    menuSubheading.classList.add('menu-subheading', 'text-capitalize')
+
+    const row = document.createElement('div')
+    row.classList.add('row')
+
+    div.appendChild(menuSubheading)
+    div.appendChild(row)
+})
+
+for (let i = 0; i < menuTypes.length; i++) {
+    menuDivs[i].children[0].innerText = menuTypes[i]
+    menuDivs[i].children[1].setAttribute('id', `${menuTypes[i]}Row`)
+    
+}
+
+//grab the appRow
+
+const appRow = document.getElementById('appetizersRow')
+const entreesRow = document.getElementById('entreesRow')
+const drinksRow = document.getElementById('drinksRow')
+const dessertsRow = document.getElementById('dessertsRow')
+const sidesRow = document.getElementById('sidesRow')
+
+//build cols and cards
+
+menuItems.forEach(item => {
+    const column = document.createElement('div')
+    column.classList.add('col-sm-3')
+
+    const card = document.createElement('div')
+    card.classList.add('card')
+    card.innerHTML = `
+        <img src="images/${item.imgUrl}" alt="${item.desc}" class="img-fluid menu-image card-image-top" />
+        <div class="card-body">
+            <h4 class="card-title text-capitalize item-item">${item.item}</h4>
+            <p class= "card-text text-uppercase item-desc">${item.desc}</p>
+        </div`
+})
+
+
+
+
+
