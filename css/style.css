@@ -1,0 +1,68 @@
+:root {
+    --purple: #663399;
+    --cream: #f3f9d2;
+    --moonstone: #009fb7;
+    --orange: #ff9f1c;
+    --bistre: #251605;
+}
+
+
+*{box-sizing: border-box;}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--cream);
+}
+
+h2 {
+    color: var(--purple);
+}
+
+.footer {
+    padding: 10px;
+}
+
+.header {
+    padding: 10px;
+    background-color: var(--moonstone);
+    border-bottom: 5px solid var(--orange);
+}
+
+.item-desc {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.item-item {
+    color: var(--purple);
+}
+
+.item-price {
+    color: var(--bistre);
+}
+
+.main {
+    padding: 40px 0;
+}
+
+.menu-div {
+    padding: 40px 0; 
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.subtotal-div, .ticket-div {
+    padding: 15px;
+    background-color: whitesmoke;
+    border: 3px solid var(--bistre);
+    border-radius: 5px;
+}
+
+#receiptTable {
+    padding: 10px 0;
+    width: 100%;
+
+}
