@@ -196,6 +196,6 @@ const menuItems = [
         desc: 'just a pot of gravy!',
         imgUrl: '',
         price: 3.99,
-        qty: 3.00
+        qty: 0
     }
 ]
