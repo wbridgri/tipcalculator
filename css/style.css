@@ -47,6 +47,10 @@ h2 {
     color: var(--bistre);
 }
 
+img {
+    max-height: 200px;
+}
+
 .main {
     padding: 40px 0;
 }
